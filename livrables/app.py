@@ -21,7 +21,7 @@ APP_VERSION = "v5.2"
 LOGO_PATH = ASSETS_DIR / "Bolt_logo.png"
 TECH_IMAGE = ASSETS_DIR / "Schema_technique.png"
 CONSTRUCTION_IMAGE = ASSETS_DIR / "construction_image.png"
-LOGO_WIDTH = 310  # ~40% wider than previous display
+LOGO_WIDTH = 217  # ~30% smaller than previous value (approx.)
 IMAGE_COLUMNS = (5, 6)  # Wider image column for both tabs (~45% increase)
 
 DEFAULT_HEAD_TYPES = [
