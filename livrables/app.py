@@ -93,12 +93,12 @@ st.set_page_config(
 )
 
 st.title(f"Bolt {APP_VERSION} - Effort de serrage")
-subtitle_col, logo_col = st.columns([4, 1])
+subtitle_col, logo_col = st.columns([5, 2])
 with subtitle_col:
     st.write("Calcul et dimensionnement de visserie en mode Streamlit.")
 with logo_col:
     if LOGO_PATH.exists():
-        st.image(str(LOGO_PATH), width=110)
+        st.image(str(LOGO_PATH), width=155)
 
 tete_table, head_types_raw, tete_error = load_tete_table()
 if tete_error:
@@ -120,7 +120,7 @@ def render_image(image_path: Path) -> None:
 
 with tab_calc:
     st.subheader("Couple -> Effort de serrage et contraintes")
-    col_form, col_img = st.columns([2, 1], gap="large")
+    col_form, col_img = st.columns([5, 3], gap="large")
     with col_form:
         with st.form("calc_form"):
             dn = st.selectbox(
@@ -198,7 +198,7 @@ with tab_calc:
 
 with tab_dim:
     st.subheader("Dimensionnement (effort cible -> choix de vis)")
-    col_form, col_img = st.columns([2, 1], gap="large")
+    col_form, col_img = st.columns([5, 3], gap="large")
     with col_form:
         with st.form("dim_form"):
             if diam_values:
