@@ -21,6 +21,8 @@ APP_VERSION = "v5.2"
 LOGO_PATH = ASSETS_DIR / "Bolt_logo.png"
 TECH_IMAGE = ASSETS_DIR / "Schema_technique.png"
 CONSTRUCTION_IMAGE = ASSETS_DIR / "construction_image.png"
+LOGO_WIDTH = 220  # ~40% wider than previous display
+IMAGE_COLUMNS = (5, 6)  # Wider image column for both tabs (~45% increase)
 
 DEFAULT_HEAD_TYPES = [
     "Hexagonale",
@@ -98,7 +100,7 @@ with subtitle_col:
     st.write("Calcul et dimensionnement de visserie en mode Streamlit.")
 with logo_col:
     if LOGO_PATH.exists():
-        st.image(str(LOGO_PATH), width=155)
+        st.image(str(LOGO_PATH), width=LOGO_WIDTH)
 
 tete_table, head_types_raw, tete_error = load_tete_table()
 if tete_error:
@@ -120,7 +122,7 @@ def render_image(image_path: Path) -> None:
 
 with tab_calc:
     st.subheader("Couple -> Effort de serrage et contraintes")
-    col_form, col_img = st.columns([5, 3], gap="large")
+    col_form, col_img = st.columns(IMAGE_COLUMNS, gap="large")
     with col_form:
         with st.form("calc_form"):
             dn = st.selectbox(
@@ -198,7 +200,7 @@ with tab_calc:
 
 with tab_dim:
     st.subheader("Dimensionnement (effort cible -> choix de vis)")
-    col_form, col_img = st.columns([5, 3], gap="large")
+    col_form, col_img = st.columns(IMAGE_COLUMNS, gap="large")
     with col_form:
         with st.form("dim_form"):
             if diam_values:
