@@ -21,7 +21,7 @@ APP_VERSION = "v5.2"
 LOGO_PATH = ASSETS_DIR / "Bolt_logo.png"
 TECH_IMAGE = ASSETS_DIR / "Schema_technique.png"
 CONSTRUCTION_IMAGE = ASSETS_DIR / "construction_image.png"
-LOGO_WIDTH = 220  # ~40% wider than previous display
+LOGO_WIDTH = 310  # ~40% wider than previous display
 IMAGE_COLUMNS = (5, 6)  # Wider image column for both tabs (~45% increase)
 
 DEFAULT_HEAD_TYPES = [
@@ -94,13 +94,10 @@ st.set_page_config(
     layout="wide",
 )
 
-logo_col, title_col = st.columns([2, 5])
-with logo_col:
-    if LOGO_PATH.exists():
-        st.image(str(LOGO_PATH), width=LOGO_WIDTH)
-with title_col:
-    st.title(f"Bolt {APP_VERSION} - Effort de serrage")
-    st.write("Calcul et dimensionnement de visserie en mode Streamlit.")
+st.title(f"Bolt {APP_VERSION} - Effort de serrage")
+if LOGO_PATH.exists():
+    st.image(str(LOGO_PATH), width=LOGO_WIDTH)
+st.write("Calcul et dimensionnement de visserie en mode Streamlit.")
 
 tete_table, head_types_raw, tete_error = load_tete_table()
 if tete_error:
