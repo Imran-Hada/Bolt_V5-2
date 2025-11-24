@@ -1,0 +1,22 @@
+Matériau;Module d'Young;Type / nuance typique;Limite élastique Re (MPa);Résistance à la rupture Rm (MPa);Remarques principales
+Acier;210;Acier carbone C45 (ou vis 8.8);640 – 800;800 – 880;Bonne résistance générale, bon comportement au serrage.
+Acier haute résistance (vis 10.9);210;Trempé et revenu;900 – 940;1040 – 1180;Standard pour vis de structure et mécanique générale.
+Inox austénitique (A2-70);210;AISI 304;450 – 600;700 – 800;Bonne ductilité, mais tendance au grippage.
+Inox martensitique (A4-80);210;AISI 316;600 – 700;800 – 900;Meilleure résistance à la corrosion, plus dur.
+Aluminium;72;6061-T6 / 6082-T6;240 – 300;310 – 340;Léger, bon rapport poids/résistance, mais sensible au fluage.
+Aluminium aéronautique;72;7075-T6;480 – 510;540 – 580;Très résistant mais peu tenace (Rm proche de l’acier doux).
+Cuivre;130;Cuivre électrolytique;70 – 120;200 – 250;Matériau ductile, faible Re.
+Bronze;130;CuSn12 / CuAl10Ni;180 – 300;350 – 500;Bon compromis entre résistance et frottement.
+Titane (alliage Ti-6Al-4V);115;Grade 5;830 – 900;900 – 1000;Excellente résistance/masse, risque de grippage, cher.
+Titane pur (Grade 2);115;Non allié;275 – 450;480 – 620;Ductile, bon pour contact avec inox ou cuivre.
+Nylon (PA6, PA66);3;Polyamide 6/6;45 – 80;70 – 100;Dépend fortement de l’humidité et de la température.
+PTFE (Téflon);0.8;Polytétrafluoroéthylène;10 – 20;20 – 30;Très faible rigidité, auto-lubrifiant.
+;;;;;
+;;;;;
+;;;;;
+Acier / Inox;190 – 210;Très rigide, peu de déformation.;;;
+Aluminium;68 – 72;~? de la rigidité de l’acier.;;;
+Cuivre / Bronze;100 – 130;Métaux ductiles, bons conducteurs thermiques.;;;
+Titane;105 – 115;Rigidité intermédiaire, très bon ratio résistance/poids.;;;
+Nylon;2 – 3;Déformation importante (fluage).;;;
+PTFE;0,4 – 0,8;Extrêmement souple, très faible effort admissible;;;
