@@ -94,13 +94,13 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title(f"Bolt {APP_VERSION} - Effort de serrage")
-subtitle_col, logo_col = st.columns([5, 2])
-with subtitle_col:
-    st.write("Calcul et dimensionnement de visserie en mode Streamlit.")
+logo_col, title_col = st.columns([2, 5])
 with logo_col:
     if LOGO_PATH.exists():
         st.image(str(LOGO_PATH), width=LOGO_WIDTH)
+with title_col:
+    st.title(f"Bolt {APP_VERSION} - Effort de serrage")
+    st.write("Calcul et dimensionnement de visserie en mode Streamlit.")
 
 tete_table, head_types_raw, tete_error = load_tete_table()
 if tete_error:
